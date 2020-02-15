@@ -8,7 +8,7 @@ Step By Step Command Line On Termux :
 1. pkg install php
 2. pkg install curl
 3. pkg install git
-4. git clone https://github.com/deniirawan2502/denis
+4. git clone https://github.com/deniirawan02/denis
 5. cd denis
 6. php gojek.php
 7. masukin nomor hp
