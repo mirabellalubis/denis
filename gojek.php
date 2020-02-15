@@ -28,76 +28,76 @@ if ($register == false)
     $verif = verif($otp, $register);
     if ($verif == false)
         {
-        echo "\e[91m[x] Kode Verifikasi Salah\n";
+        echo "\e[100m[x] Kode Verifikasi Salah\n";
         goto otp;
         }
       else
         {
         file_put_contents("token/".$verif['data']['customer']['name'].".txt", $verif['data']['access_token']);
-        echo "\e[93m[!] Trying to redeem Voucher : GOFOOD021120A !\n";
+        echo "\e[200m[!] Trying to redeem Voucher : GOFOOD021120A !\n";
         sleep(3);
         $claim = claim($verif);
         if ($claim == false)
             {
-            echo "\e[92m[!]".$voucher."\n";
+            echo "\e[300m[!]".$voucher."\n";
             sleep(3);
-            echo "\e[93m[!] Trying to redeem Voucher : GOFOOD021120A !\n";
+            echo "\e[400m[!] Trying to redeem Voucher : GOFOOD021120A !\n";
             sleep(3);
             goto next;
             }
             else{
-                echo "\e[92m[+] ".$claim."\n";
+                echo "\e[300m[+] ".$claim."\n";
                 sleep(3);
-                echo "\e[93m[!] Trying to redeem Voucher : GOFOOD021120A !\n";
+                echo "\e[400m[!] Trying to redeem Voucher : GOFOOD021120A !\n";
                 sleep(3);
                 goto ride;
             }
             next:
             $claim = claim1($verif);
             if ($claim == false) {
-                echo "\e[92m[!]".$claim['errors'][0]['message']."\n";
+                echo "\e[300m[!]".$claim['errors'][0]['message']."\n";
                 sleep(3);
-                echo "\e[93m[!] Trying to redeem Voucher : GOFOOD021120A !\n";
+                echo "\e[400m[!] Trying to redeem Voucher : GOFOOD021120A !\n";
                 sleep(3);
                 goto next1;
             }
             else{
-                echo "\e[92m[+] ".$claim."\n";
+                echo "\e[300m[+] ".$claim."\n";
                 sleep(3);
-                echo "\e[93m[!] Trying to redeem Voucher : GOFOOD021120A !\n";
+                echo "\e[400m[!] Trying to redeem Voucher : GOFOOD021120A !\n";
                 sleep(3);
                 goto ride;
             }
             next1:
             $claim = claim2($verif);
             if ($claim == false) {
-                echo "\e[92m[!]".$claim['errors'][0]['message']."\n";
+                echo "\e[300m[!]".$claim['errors'][0]['message']."\n";
                 sleep(3);
-                echo "\e[93m[!] Trying to redeem Voucher : GOFOOD021120A !\n";
+                echo "\e[400m[!] Trying to redeem Voucher : GOFOOD021120A !\n";
                 sleep(3);
                 goto ride;
             }
           else
             {
-            echo "\e[92m[+] ".$claim . "\n";
+            echo "\e[300m[+] ".$claim . "\n";
             sleep(3);
-            echo "\e[93m[!] Trying to redeem Voucher : GOFOOD021120A !\n";
+            echo "\e[400m[!] Trying to redeem Voucher : GOFOOD021120A !\n";
             sleep(3);
             goto ride;
             }
             ride:
             $claim = ride($verif);
             if ($claim == false ) {
-                echo "\e[92m[!]".$claim['errors'][0]['message']."\n";
+                echo "\e[300m[!]".$claim['errors'][0]['message']."\n";
                 sleep(3);
-                echo "\e[93m[!] Trying to redeem Voucher : GOFOOD021120A !\n";
+                echo "\e[400m[!] Trying to redeem Voucher : GOFOOD021120A !\n";
                 sleep(3);
 
             }
             else{
-                echo "\e[92m[+] ".$claim."\n";
+                echo "\e[300m[+] ".$claim."\n";
                 sleep(3);
-                echo "\e[93m[!] Trying to redeem Voucher : GOFOOD021120A !\n";
+                echo "\e[400m[!] Trying to redeem Voucher : GOFOOD021120A !\n";
                 sleep(3);
                 goto pengen;
             }
@@ -107,7 +107,7 @@ if ($register == false)
                 echo "\033VOUCHER INVALID/GAGAL REDEEM\n";
             }
             else{
-                echo "\e[92m[+] ".$claim."\n";
+                echo "\e[300m[+] ".$claim."\n";
                 
         }
     }
