@@ -10,7 +10,7 @@ Step By Step Command Line On Termux :
 3. pkg install git
 4. git clone https://github.com/deniirawan02/denis
 5. cd denis
-6. php gojek.php
+6. php deniss.php
 7. masukin nomor hp
 8. masukin kode verifikasi(OTP)
 9. pilih kode voucher
