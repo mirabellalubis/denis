@@ -6,13 +6,13 @@ WAJIB NOMOR BARU atau NOMOR YANG BELUM TERDAFTAR GOJEK
 
 Langkah Demi Langkah Baris Perintah Pada Termux:
 
-pkg instal php
-pkg instal curl
-pkg instal git
-git clone https://github.com/deniirawan02/denis
-cd denis
-php deniss.php
-masukin nomor hp
-masukin kode verifikasi (OTP)
-pilih kode voucher
-repeat (ulangi seperti biasa)
+ 1. pkg instal php
+ 2. pkg instal curl
+ 3. pkg instal git
+ 4. git clone https://github.com/deniirawan02/denis
+ 5. cd denis
+ 6. php deniss.php
+ 7. masukin nomor hp
+ 8. masukin kode verifikasi (OTP)
+ 9. pilih kode voucher
+10. repeat (ulangi seperti biasa)
