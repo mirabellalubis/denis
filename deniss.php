@@ -110,14 +110,6 @@ if ($register == false)
                 echo "\e[300m[+] ".$claim."\n";
                 
         }
-    }
-    }
-
-gema  "\ n" . warna ( "kuning" , "!] Harap tunggu" );
-        untuk ( $ a = 1 ; $ a <= 3 ; $ a ++) {
-         warna gema ( "kuning" , "." );
-        tidur ( 1 );
-        }
         tidur ( 3 );
         $ goride1 = permintaan ( '/ promosi-promosi / v1 / promosi / pendaftaran' , $ token , '{"promo_code": "COBAINGOJEK"}' );
         $ Message2 = fetch_value ( $ goride1 , ' "message": "' , '"' );
