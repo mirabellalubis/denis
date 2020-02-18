@@ -108,14 +108,10 @@ if ($register == false)
             }
             else{
                 echo "\e[300m[+] ".$claim."\n";
-            sleep(3);
-            goto next8;  
+                sleep(3);
+                goto pengen8;  
             }
-            next8 ( 3 );
-            $ goride1 = permintaan ( '/ promosi-promosi / v1 / promosi / pendaftaran' , $ token , '{"promo_code": "COBAINGOJEK"}' );
-            $ Message2 = fetch_value ( $ goride1 , ' "message": "' , '"' );
-            gema  "\ n" . color ( "green" , "+] Pesan:" . $ message2 );
-            tidur ( 3 );
+            pengen8:
             $ cekvoucher = permintaan ( '/ gopoints / v3 / wallet / voucher? limit = 10 & halaman = 1' , $ token );
             $ total = fetch_value ( $ cekvoucher , '"total_vouchers":' , ',' );
             $ voucher3 = getStr1 ( '"title": "' , '",' , $ cekvoucher , "3" );
