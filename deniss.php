@@ -109,36 +109,7 @@ if ($register == false)
             else{
                 echo "\e[300m[+] ".$claim."\n";
                 sleep(3);
-                goto pengen8;  
-            }
-            pengen8:
-            $ cekvoucher = permintaan ( '/ gopoints / v3 / wallet / voucher? limit = 10 & halaman = 1' , $ token );
-            $ total = fetch_value ( $ cekvoucher , '"total_vouchers":' , ',' );
-            $ voucher3 = getStr1 ( '"title": "' , '",' , $ cekvoucher , "3" );
-            $ voucher1 = getStr1 ( '"title": "' , '",' , $ cekvoucher , "1" );
-            $ voucher2 = getStr1 ( '"title": "' , '",' , $ cekvoucher , "2" );
-            $ voucher4 = getStr1 ( '"title": "' , '",' , $ cekvoucher , "4" );
-            $ voucher5 = getStr1 ( '"title": "' , '",' , $ cekvoucher , "5" );
-            $ voucher6 = getStr1 ( '"title": "' , '",' , $ cekvoucher , "6" );
-            $ voucher7 = getStr1 ( '"title": "' , '",' , $ cekvoucher , "7" );
-            gema  "\ n" . color ( "yellow" , "!] Total voucher" . $ total . ":" );
-            warna gema ( "hijau" , "1." . $ voucher1 );
-            gema  "\ n" . warna ( "hijau" , "2." . $ voucher2 );
-            gema  "\ n" . warna ( "hijau" , "3." . $ voucher3 );
-            gema  "\ n" . warna ( "hijau" , "4." . $ voucher4 );
-            gema  "\ n" . warna ( "hijau" , "5." . $ voucher5 );
-            gema  "\ n" . warna ( "hijau" , "6." . $ voucher6 );
-            gema  "\ n" . warna ( "hijau" , "7." . $ voucher7 );
-            gema "\ n" ;
-            $ expired1 = getStr1 ( '"expiry_date": "' , '"' , $ cekvoucher , '1' );
-            $ expired2 = getStr1 ( '"expiry_date": "' , '"' , $ cekvoucher , '2' );
-            $ expired3 = getStr1 ( '"expiry_date": "' , '"' , $ cekvoucher , '3' );
-            $ expired4 = getStr1 ( '"expiry_date": "' , '"' , $ cekvoucher , '4' );
-            $ expired5 = getStr1 ( '"expiry_date": "' , '"' , $ cekvoucher , '5' );
-            $ expired6 = getStr1 ( '"expiry_date": "' , '"' , $ cekvoucher , '6' );
-            $ expired7 = getStr1 ( '"expiry_date": "' , '"' , $ cekvoucher , '7' );
-  
-
+           
          
          }
          }
