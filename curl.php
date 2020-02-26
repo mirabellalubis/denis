@@ -149,7 +149,7 @@ function verif($otp, $token)
     }
 function claim($token)
     {
-    $data = '{"promo_code":"GOFOOD021120A"}';    
+    $data = '{"promo_code":"GOFOOD022620A"}';    
     $claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
     if ($claim['success'] == 1)
         {
@@ -163,7 +163,7 @@ function claim($token)
     }
     function claim1($token)
     {
-    $data = '{"promo_code":"GOFOOD021120A"}';    
+    $data = '{"promo_code":"GOFOOD022620A"}';    
     $claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
     if ($claim['success'] == 1)
         {
@@ -177,7 +177,7 @@ function claim($token)
     }
     function claim2($token)
     {
-    $data = '{"promo_code":"GOFOOD021120A"}';    
+    $data = '{"promo_code":"GOFOOD022620A"}';    
     $claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
     if ($claim['success'] == 1)
         {
@@ -191,7 +191,7 @@ function claim($token)
     }
      function ride($token)
     {
-    $data = '{"promo_code":"GOFOOD021120A"}';    
+    $data = '{"promo_code":"GOFOOD022620A"}';    
     $claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
     if ($claim['success'] == 1)
         {
@@ -205,7 +205,7 @@ function claim($token)
     }
      function cekvocer($token)
     {
-    $data = '{"promo_code":"GOFOOD021120A"}';    
+    $data = '{"promo_code":"GOFOOD022620A"}';    
     $claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
     if ($claim['success'] == 1)
         {
@@ -219,7 +219,7 @@ function claim($token)
     }
      function pengen($token)
     {
-    $data = '{"promo_code":"GOFOOD021120A"}';    
+    $data = '{"promo_code":"GOFOOD022620A"}';    
     $claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
     if ($claim['success'] == 1)
         {
